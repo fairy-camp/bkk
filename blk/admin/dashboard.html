@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>dashboard</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="favicon" href="../img/SA.png" width="16px">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../css/fontawesome-free/css/all.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- overlayScrollbars -->
+    <link rel="stylesheet" href="../css/adminlte.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <!-- Google Font: Source Sans Pro -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    <link rel="stylesheet" href="../css/summernote-bs4.css">
+    <link rel="stylesheet" href="../css/dataTables.bootstrap4.css">
+    <style>
+        body {
+            font-family: Nunito, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        }
+
+        .form-inline label {
+            justify-content: start;
+        }
+
+        .bg-hijau {
+            background-color: #85cc52 !important;
+        }
+
+        .accent-hijau {
+            color: #425931 !important;
+        }
+
+        .main-header {
+            border-bottom: 0px !important;
+        }
+
+        .circle {
+            background-color: cornsilk;
+            width: 125px;
+            height: 125px;
+            border-radius: 100%;
+            text-shadow: 5px solid black;
+            margin-top: -80px;
+            padding-top: 26px;
+            color: #3d9970;
+            margin-right: -10px
+        }
+    </style>
+</head>
+
+<body class="hold-transition sidebar-mini">
+    <!-- Site wrapper -->
+    <div class="wrapper">
+
+    <!-- Navbar -->
+    <nav class="main-header navbar navbar-expand navbar-olive navbar-dark">
+        <!-- Left navbar links -->
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
+            </li>
+            <li class="nav-item d-none d-sm-inline-block">
+                <a href="" class="nav-link">Home</a>
+            </li>
+        </ul>
+
+        <!-- Right navbar links -->
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link d-block py-0" role="button" data-toggle="dropdown" id="userDropdown" aria-haspopup="true" aria-expanded="false"><?= $user['nama'] ?>
+                    <img src="../img/SA.png" class="img-circle elevation-2 ml-2" alt="User Image" width="40">
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                    <a href="" class="dropdown-item"><i class="fas fa-fw fa-user"></i>
+                        My Profile
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a href="" class="dropdown-item"><i class="fas fa-fw fa-sign-out-alt"></i>
+                        Logout
+                    </a>
+            </li>
+        </ul>
+    </nav>
+    <!-- /.navbar -->
+    
+    <!-- Main Sidebar Container -->
+    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+        <!-- Brand Logo -->
+        <a href="" class="brand-link py-3 text-center d-inline-flex bg-info w-100" style="padding-left: 12px">
+            <img src="../img/SA.png" width="50px" height="50px">
+            <p class="pl-3 text-bold" style="padding-top: 12px">ALUMNI SMKSA</p>
+        </a>
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <!-- Sidebar user (optional) -->
+            <!-- Query Menu-->
+
+            <!-- Sidebar Menu -->
+            <nav class="mt-2">
+                <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                    
+                        <li class="nav-header pl-2">Dashboard</li>
+                        <li class="nav-item has-treeview">
+                            <a href="" class="nav-link">
+                                <i class="nav-icon fas fa-tachometer-alt fa-fw"></i>
+                                <p>Dashboard</p>
+                            </a>
+                        </li>
+                        <li class="nav-item has-treeview">
+                            <a href="" class="nav-link">
+                                <i class="nav-icon fas fa-table fa-fw"></i>
+                                <p>Data Alumni</p>
+                            </a>
+                        </li>
+                        <li class="nav-item has-treeview">
+                            <a href="" class="nav-link">
+                                <i class="nav-icon fas fa-briefcase fa-fw"></i>
+                                <p>Info Loker</p>
+                            </a>
+                        </li>
+<!-- 2 -->
+                        <li class="nav-header pl-2">Profile</li>
+                        <li class="nav-item has-treeview">
+                            <a href="" class="nav-link">
+                                <i class="nav-icon fas fa-user-circle fa-fw"></i>
+                                <p>My Profile</p>
+                            </a>
+                        </li>
+                        <li class="nav-item has-treeview">
+                            <a href="" class="nav-link">
+                                <i class="nav-icon fas fa-user-edit fa-fw"></i>
+                                <p>Edit Profile</p>
+                            </a>
+                        </li>
+                        <li class="nav-item has-treeview">
+                            <a href="" class="nav-link">
+                                <i class="nav-icon fas fa-key fa-fw"></i>
+                                <p>Change Password</p>
+                            </a>
+                        </li>
+
+                        <li class="nav-header pl-2">Eksport</li>
+                        <li class="nav-item has-treeview">
+                            <a href="" class="nav-link">
+                                <i class="nav-icon fas fa-user-circle fa-fw"></i>
+                                <p>Eksport Laporan</p>
+                            </a>
+                        </li>
+                        
+                        <li class="nav-header pl-2">Action</li>
+                        <li class="nav-item has-treeview">
+                            <a href="" class="nav-link">
+                                <i class="nav-icon fas fa-sign-out-alt fa-fw"></i>
+                                <p>
+                                    Log Out
+                                </p>
+                            </a>
+                        </li>
+                </ul>
+            </nav>
+            <!-- /.sidebar-menu -->
+        </div>
+        <!-- /.sidebar -->
+    </aside>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <div class="content-header pb-0">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h1 class="m-0 text-dark">Dashboard</h1>
+                    </div><!-- /.col -->
+                    <div class="col-sm-6">
+                        <ol class="breadcrumb float-sm-right">
+                            <li class="breadcrumb-item active"><a href="">Dashboard</a></li>
+                        </ol>
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
+            </div><!-- /.container-fluid -->
+        </div>
+        <!-- /.content-header -->
+
+        <!-- Main content -->
+        <section class="content">
+            <div class="container-fluid">
+                <!-- Small boxes (Stat box) -->
+                <form action="" method="post">
+                    <div class="row elevation-2 my-4" style="background-color: rgb(255, 255, 255); border-radius: 20px;">
+                        <div class="col-sm-12 text-center">
+                            <p class="text-bold mb-0 mt-3" style="font-size: 20pt">Grafik Alumni</p>
+                        </div>
+                        <div class="card-body col-sm-12">
+                            <p class="text-bold">Berdasarkan Tahun Lulus</p>
+                            <div class="chart">
+                                <canvas id="areaChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                            </div>
+                        </div>
+                        <div class="card-body col-sm-6">
+                            <p class="text-bold">Berdasarkan Jurusan</p>
+                            <div class="chart">
+                                <canvas id="barChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                            </div>
+                        </div>
+                        <div class="card-body col-sm-3">
+                            <p class="text-bold">Berdasarkan Status</p>
+                            <canvas id="donutChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                        </div>
+                        <div class="card-body col-sm-3">
+                            <p class="text-bold">Berdasarkan Jenis Kelamin</p>
+                            <canvas id="pieChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3 col-6 mt-5">
+                            <!-- small box -->
+                            <div class="small-box bg-primary">
+                                <div class="inner">
+                                    <h3 style="font-size: 36pt"></h3>
+
+                                    <p class="mt-1 mb-0">Data Alumni yang sudah masuk</p>
+                                </div>
+                                <div class="icon">
+                                    <i style="padding-left: 18px" class="circle elevation-2 fas fa-users"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-6 mt-5">
+                            <!-- small box -->
+                            <div class="small-box bg-maroon">
+                                <div class="inner">
+                                    <h3 style="font-size: 36pt"></h3>
+
+                                    <p class="mt-1 mb-0">Data Alumni yang bekerja</p>
+                                </div>
+                                <div class="icon">
+                                    <i style="padding-left: 28px" class="circle elevation-2 fas fa-briefcase"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-6 mt-5">
+                            <!-- small box -->
+                            <div class="small-box bg-teal">
+                                <div class="inner">
+                                    <h3 style="font-size: 36pt"></h3>
+
+                                    <p class="mt-1 mb-0">Data Alumni yang kuliah</p>
+                                </div>
+                                <div class="icon">
+                                    <i style="padding-left: 32px" class="circle elevation-2 fas fa-building"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-6 mt-5">
+                            <!-- small box -->
+                            <div class="small-box bg-orange">
+                                <div class="inner">
+                                    <h3 style="font-size: 36pt"></h3>
+
+                                    <p class="mt-1 mb-0">Data Alumni yang Wirausaha</p>
+                                </div>
+                                <div class="icon">
+                                    <i style="padding-left: 22px; font-size: 65px" class="circle elevation-2 fas fa-warehouse"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-6 mt-5">
+                            <!-- small box -->
+                            <div class="small-box bg-secondary">
+                                <div class="inner">
+                                    <h3 style="font-size: 36pt"></h3>
+
+                                    <p class="mt-1 mb-0">Data Alumni yang belum bekerja</p>
+                                </div>
+                                <div class="icon">
+                                    <i style="padding-left: 22px" class="circle elevation-2 fas fa-home"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-6 mt-5">
+                            <!-- small box -->
+                            <div class="small-box bg-purple">
+                                <div class="inner">
+                                    <h3 style="font-size: 36pt"></h3>
+
+                                    <p class="mt-1 mb-0">Data Alumni TKJ</p>
+                                </div>
+                                <div class="icon">
+                                    <i style="padding-left: 18px" class="circle elevation-2 fas fa-network-wired"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-6 mt-5">
+                            <!-- small box -->
+                            <div class="small-box bg-danger">
+                                <div class="inner">
+                                    <h3 style="font-size: 36pt"></h3>
+
+                                    <p class="mt-1 mb-0">Data Alumni RPL</p>
+                                </div>
+                                <div class="icon">
+                                    <i style="padding-left: 18px" class="circle elevation-2 fas fa-code"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-6 mt-5">
+                            <!-- small box -->
+                            <div class="small-box bg-warning">
+                                <div class="inner">
+                                    <h3 style="font-size: 36pt"></h3>
+
+                                    <p class="mt-1 mb-0">Data Alumni TB</p>
+                                </div>
+                                <div class="icon">
+                                    <i style="padding-left: 30px" class="circle elevation-2 fas fa-cut"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-6 mt-5">
+                            <!-- small box -->
+                            <div class="small-box bg-info">
+                                <div class="inner">
+                                    <h3 style="font-size: 36pt"></h3>
+
+                                    <p class="mt-1 mb-0">Data Alumni TKRO</p>
+                                </div>
+                                <div class="icon">
+                                    <i style="padding-left: 28px" class="circle elevation-2 fas fa-car"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-6 mt-5">
+                            <!-- small box -->
+                            <div class="small-box bg-success">
+                                <div class="inner">
+                                    <h3 style="font-size: 36pt"></h3>
+
+                                    <p class="mt-1 mb-0">Data Alumni TBSM</p>
+                                </div>
+                                <div class="icon">
+                                    <i style="padding-left: 18px" class="circle elevation-2 fas fa-motorcycle"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <footer class="main-footer">
+        <div class="float-right d-none d-sm-block">
+            by <b>Muhammad M. T.</b>
+        </div>
+        <strong>Copyright &copy; <?= date('Y'); ?> <a href="http://ponpes-smksa.sch.id">SMK Syafi'i Akrom</a>.</strong> All rights
+        reserved.
+    </footer>
+    
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+        <!-- Control sidebar content goes here -->
+    </aside>
+    <!-- /.control-sidebar -->
+    </div>
+    <!-- ./wrapper -->
+    
+    <!-- jQuery -->
+    <script src="../js/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/jquery.dataTables.js"></script>
+    <script src="../js/dataTables.bootstrap4.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../js/adminlte.min.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="../js/sweetalert2.all.min.js"></script>
+    <script src="../js/demo.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/Chart.js"></script>
+    <script src="../js/summernote-bs4.min.js"></script>
+    
+    <script>
+        $(function() {
+            // Summernote
+            var table =  $('#example1').DataTable();
+            $('#example2').DataTable();
+        
+            $('#jurusanfilter').on('change', function () {
+                table.columns(2).search( this.value ).draw();
+            } );
+            $('#statusfilter').on('change', function () {
+                table.columns(4).search( this.value ).draw();
+            } );
+            $('.textarea').summernote();
+    
+            var ctx = document.getElementById("barChart").getContext('2d');
+            var myChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ["TKJ", "RPL", "TB", "TKRO", "TBSM"],
+                    datasets: [{
+                        label: '',
+                        data: [
+                            
+                        ],
+                        backgroundColor: [
+                            'rgb(75, 192, 192)',
+                            'rgb(255, 99, 132)',
+                            'rgb(255, 206, 86)',
+                            'rgb(54, 162, 235)',
+                            'rgb(40, 167, 69)'
+                        ]
+                    }]
+                },
+                options: {
+                    maintainAspectRatio: false,
+                    responsive: true,
+                    legend: {
+                        display: false
+                    },
+                    scales: {
+                        xAxes: [{
+                            gridLines: {
+                                display: false,
+                            }
+                        }],
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }]
+                    }
+                }
+            })
+    
+            var donutChartCanvas = $('#donutChart').get(0).getContext('2d')
+            var donutChart = new Chart(donutChartCanvas, {
+                type: 'doughnut',
+                data: {
+                    labels: ["Bekerja", "Kuliah", "Wirausaha", "Belum Kerja"],
+                    datasets: [{
+                        label: '',
+                        data: [
+                            
+                        ],
+                        backgroundColor: [
+                            'rgb(216, 27, 96)',
+                            'rgb(32, 201, 151)',
+                            'rgb(253, 126, 20)',
+                            'rgb(108, 117, 125)'
+                        ]
+                    }]
+                },
+                options: {
+                    maintainAspectRatio: false,
+                    responsive: true,
+                }
+            })
+            var areaChartCanvas = $('#areaChart').get(0).getContext('2d')
+            var areaChartData = {
+                labels: ['2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021'],
+                datasets: [{
+                    label: 'Jumlah Alumni',
+                    backgroundColor: 'rgba(60,141,188,0.9)',
+                    borderColor: 'rgba(60,141,188,0.8)',
+                    pointRadius: false,
+                    pointColor: '#3b8bba',
+                    pointStrokeColor: 'rgba(60,141,188,1)',
+                    pointHighlightFill: '#fff',
+                    pointHighlightStroke: 'rgba(60,141,188,1)',
+                    data: [
+                        
+                    ]
+                }, ]
+            }
+            var areaChartOptions = {
+                maintainAspectRatio: false,
+                responsive: true,
+                legend: {
+                    display: false
+                },
+                scales: {
+                    xAxes: [{
+                        gridLines: {
+                            display: false,
+                        }
+                    }],
+                    yAxes: [{
+                        gridLines: {
+                            display: false,
+                        }
+                    }]
+                }
+            }
+    
+            var areaChart = new Chart(areaChartCanvas, {
+                type: 'line',
+                data: areaChartData,
+                options: areaChartOptions
+            })
+    
+            var pieChartCanvas = $('#pieChart').get(0).getContext('2d')
+            var pieData = {
+                labels: ["Laki - Laki", "Perempuan"],
+                datasets: [{
+                    label: '',
+                    data: [
+                        
+                    ],
+                    backgroundColor: [
+                        'rgb(61, 153, 112)',
+                        'rgb(255, 99, 132)'
+                    ]
+                }]
+            };
+            var pieOptions = {
+                maintainAspectRatio: false,
+                responsive: true,
+            }
+            var pieChart = new Chart(pieChartCanvas, {
+                type: 'pie',
+                data: pieData,
+                options: pieOptions
+            })
+        });
+    </script>
+</body>
+
+</html>
