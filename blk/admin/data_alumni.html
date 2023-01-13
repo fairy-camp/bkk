@@ -164,190 +164,97 @@
         <!-- /.sidebar -->
     </aside>
 
-    <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
-        <div class="content-header pb-0">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <h1 class="m-0 text-dark">Dashboard</h1>
-                    </div><!-- /.col -->
-                    <div class="col-sm-6">
-                        <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item active"><a href="">Dashboard</a></li>
-                        </ol>
-                    </div><!-- /.col -->
-                </div><!-- /.row -->
-            </div><!-- /.container-fluid -->
-        </div>
-        <!-- /.content-header -->
-
+    
         <!-- Main content -->
-        <section class="content">
-            <div class="container-fluid">
-                <!-- Small boxes (Stat box) -->
-                <form action="" method="post">
-                    <div class="row elevation-2 my-4" style="background-color: rgb(255, 255, 255); border-radius: 20px;">
-                        <div class="col-sm-12 text-center">
-                            <p class="text-bold mb-0 mt-3" style="font-size: 20pt">Grafik Alumni</p>
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-12">
+                            <h1 class="m-0 text-dark">Tabel Data Alumni</h1>
                         </div>
-                        <div class="card-body col-sm-12">
-                            <p class="text-bold">Berdasarkan Tahun Lulus</p>
-                            <div class="chart">
-                                <canvas id="areaChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
-                            </div>
-                        </div>
-                        <div class="card-body col-sm-6">
-                            <p class="text-bold">Berdasarkan Jurusan</p>
-                            <div class="chart">
-                                <canvas id="barChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
-                            </div>
-                        </div>
-                        <div class="card-body col-sm-3">
-                            <p class="text-bold">Berdasarkan Status</p>
-                            <canvas id="donutChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
-                        </div>
-                        <div class="card-body col-sm-3">
-                            <p class="text-bold">Berdasarkan Jenis Kelamin</p>
-                            <canvas id="pieChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-3 col-6 mt-5">
-                            <!-- small box -->
-                            <div class="small-box bg-primary">
-                                <div class="inner">
-                                    <h3 style="font-size: 36pt"></h3>
-
-                                    <p class="mt-1 mb-0">Data Alumni yang sudah masuk</p>
-                                </div>
-                                <div class="icon">
-                                    <i style="padding-left: 18px" class="circle elevation-2 fas fa-users"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-6 mt-5">
-                            <!-- small box -->
-                            <div class="small-box bg-maroon">
-                                <div class="inner">
-                                    <h3 style="font-size: 36pt"></h3>
-
-                                    <p class="mt-1 mb-0">Data Alumni yang bekerja</p>
-                                </div>
-                                <div class="icon">
-                                    <i style="padding-left: 28px" class="circle elevation-2 fas fa-briefcase"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-6 mt-5">
-                            <!-- small box -->
-                            <div class="small-box bg-teal">
-                                <div class="inner">
-                                    <h3 style="font-size: 36pt"></h3>
-
-                                    <p class="mt-1 mb-0">Data Alumni yang kuliah</p>
-                                </div>
-                                <div class="icon">
-                                    <i style="padding-left: 32px" class="circle elevation-2 fas fa-building"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-6 mt-5">
-                            <!-- small box -->
-                            <div class="small-box bg-orange">
-                                <div class="inner">
-                                    <h3 style="font-size: 36pt"></h3>
-
-                                    <p class="mt-1 mb-0">Data Alumni yang Wirausaha</p>
-                                </div>
-                                <div class="icon">
-                                    <i style="padding-left: 22px; font-size: 65px" class="circle elevation-2 fas fa-warehouse"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-6 mt-5">
-                            <!-- small box -->
-                            <div class="small-box bg-secondary">
-                                <div class="inner">
-                                    <h3 style="font-size: 36pt"></h3>
-
-                                    <p class="mt-1 mb-0">Data Alumni yang belum bekerja</p>
-                                </div>
-                                <div class="icon">
-                                    <i style="padding-left: 22px" class="circle elevation-2 fas fa-home"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-6 mt-5">
-                            <!-- small box -->
-                            <div class="small-box bg-purple">
-                                <div class="inner">
-                                    <h3 style="font-size: 36pt"></h3>
-
-                                    <p class="mt-1 mb-0">Data Alumni TKJ</p>
-                                </div>
-                                <div class="icon">
-                                    <i style="padding-left: 18px" class="circle elevation-2 fas fa-network-wired"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-6 mt-5">
-                            <!-- small box -->
-                            <div class="small-box bg-danger">
-                                <div class="inner">
-                                    <h3 style="font-size: 36pt"></h3>
-
-                                    <p class="mt-1 mb-0">Data Alumni RPL</p>
-                                </div>
-                                <div class="icon">
-                                    <i style="padding-left: 18px" class="circle elevation-2 fas fa-code"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-6 mt-5">
-                            <!-- small box -->
-                            <div class="small-box bg-warning">
-                                <div class="inner">
-                                    <h3 style="font-size: 36pt"></h3>
-
-                                    <p class="mt-1 mb-0">Data Alumni TB</p>
-                                </div>
-                                <div class="icon">
-                                    <i style="padding-left: 30px" class="circle elevation-2 fas fa-cut"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-6 mt-5">
-                            <!-- small box -->
-                            <div class="small-box bg-info">
-                                <div class="inner">
-                                    <h3 style="font-size: 36pt"></h3>
-
-                                    <p class="mt-1 mb-0">Data Alumni TKRO</p>
-                                </div>
-                                <div class="icon">
-                                    <i style="padding-left: 28px" class="circle elevation-2 fas fa-car"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-6 mt-5">
-                            <!-- small box -->
-                            <div class="small-box bg-success">
-                                <div class="inner">
-                                    <h3 style="font-size: 36pt"></h3>
-
-                                    <p class="mt-1 mb-0">Data Alumni TBSM</p>
-                                </div>
-                                <div class="icon">
-                                    <i style="padding-left: 18px" class="circle elevation-2 fas fa-motorcycle"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </form>
+                    </div><!-- /.row -->
+                </div><!-- /.container-fluid -->
             </div>
-        </section>
+            <!-- /.content-header -->
+            <div class="container">
+                <div class="flash-data" data-flashdata="" data-data="Alumni"></div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="row mb-2">
+                            <div class="col-sm-12 justify-content-end">
+                                <label>Filter Berdasarkan :</label>
+                            </div>
+                            <div class="col-sm-12 col-md-4 my-1">
+                                <select class="custom-select" name="jurusanfilter" id="jurusanfilter">
+                                    <option value="">Pilih Jurusan</option>
+                                    <option value="Teknik Komputer dan Jaringan">Teknik Komputer dan Jaringan</option>
+                                    <option value="Rekayasa Perangkat Lunak">Rekayasa Perangkat Lunak</option>
+                                    <option value="Tata Busana">Tata Busana</option>
+                                    <option value="Teknik Kendaraan Ringan Otomotif">Teknik Kendaraan Ringan Otomotif</option>
+                                    <option value="Teknik Bisnis Sepeda Motor">Teknik Bisnis Sepeda Motor</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-12 col-md-4 my-1">
+                                <select class="custom-select" name="statusfilter" id="statusfilter">
+                                    <option value="">Pilih Status</option>
+                                    <option value="Bekerja">Bekerja</option>
+                                    <option value="Wirausaha">Wirausaha</option>
+                                    <option value="Kuliah">Kuliah</option>
+                                    <option value="Belum Kerja">Belum Kerja</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body table-responsive">
+                                <table class="table table-striped table-hover text-nowrap" id="example1">
+                                    <thead>
+                                        <tr>
+                                            <th>No.</th>
+                                            <th>Nama</th>
+                                            <th>Jurusan</th>
+                                            <th>Tahun Lulus</th>
+                                            <th>Status</th>
+                                            <th>Opsi</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Budi Santoso</td>
+                                                <td>Rekayasa Perangkat Lunak</td>
+                                                <td>2022</td>
+                                                <td>Bekerja</td>
+                                                <td>
+                                                    <a href="" class="btn btn-info detail"><i class="fas fa-eye"></i></a>
+                                                    <a href="" class="btn btn-warning"><i class="fas fa-pencil-alt"></i></a>
+                                                    <a href="" class="btn btn-danger hapus"><i class="fas fa-trash-alt"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Budi Santoso</td>
+                                                <td>Rekayasa Perangkat Lunak</td>
+                                                <td>2022</td>
+                                                <td>Bekerja</td>
+                                                <td>
+                                                    <a href="" class="btn btn-info detail"><i class="fas fa-eye"></i></a>
+                                                    <a href="" class="btn btn-warning"><i class="fas fa-pencil-alt"></i></a>
+                                                    <a href="" class="btn btn-danger hapus"><i class="fas fa-trash-alt"></i></a>
+                                                </td>
+                                            </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!--/.card-body -->
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <footer class="main-footer">
